@@ -2,27 +2,15 @@
 # 2016/3/28 by Zhang Yanbo
 # 用以构建随机网格
 
-
-#基础节点类型
-type GraphNode
-	links
-	visitedQ
-	color
-end
-
-type Graph
-	GraphNodes
-	d
-	m
-end
+include("basicTypes.jl")
 
 #构建节点
-function makeNode(d)
-	GraphNode(falses(d), falses, Int32(0))
+function makeNode(d::Int)
+	GraphNode(falses(d), falses, 0)
 end
 
 #设置随机边
-function makeNDGraph(d, m, p)
+function makeNDGraph(d::Int, m::Int, p::Float64)
 	g0 = [makeNode(d) for i = 1:m^d]
 
 	for i = 1:m^d, j = 1:d

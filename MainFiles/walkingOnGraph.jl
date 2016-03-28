@@ -2,13 +2,15 @@
 # 2016/3/28 by Zhang Yanbo
 # 用以在图上进行基本的操作
 
+include("basicTypes.jl")
+
 #获得图g的index位置节点
-function getNode(g, index...)
+function getNode(g::Graph, index...)
 	return g.GraphNodes[index...]
 end
 
 #测试某方向是否连接，正为正方向，负为负方向
-function linkTest(g, bond, index)
+function linkTest(g::Graph, bond::Int, index)
 	in_index = index
 	in_bond = abs(bond)
 
