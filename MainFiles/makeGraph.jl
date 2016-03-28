@@ -23,7 +23,7 @@ end
 
 #设置随机边
 function makeNDGraph(d, m, p)
-	g0 = [makeNode(2) for i = 1:m^d]
+	g0 = [makeNode(d) for i = 1:m^d]
 
 	for i = 1:m^d, j = 1:d
 		if rand() < p
