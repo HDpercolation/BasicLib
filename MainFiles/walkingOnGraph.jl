@@ -12,6 +12,7 @@ function linkTest(g, bond, index)
 	in_index = index
 	in_bond = abs(bond)
 
+	#用以处理反向边
 	if bond < 0
 		in_index[in_bond] += -1 + g.m
 		in_index[in_bond] %= g.m

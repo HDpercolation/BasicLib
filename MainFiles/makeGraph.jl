@@ -27,12 +27,12 @@ function makeNDGraph(d, m, p)
 
 	for i = 1:m^d, j = 1:d
 		if rand() < p
-			g0[i].links[j] = true;
+			g0[i].links[j] = true
 		end
 	end
 
-	ds = Array(Int64, d);
-	ds[:] = m;
+	ds = Array(Int64, d)
+	ds[:] = m
 
 	return Graph(reshape(g0, ds...), d, m)
 end
