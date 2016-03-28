@@ -11,7 +11,7 @@ type GraphNode
 end
 
 type Graph
-	GraphNodes::GraphNode
+	GraphNodes
 	d
 	m
 end
